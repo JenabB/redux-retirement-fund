@@ -1,20 +1,27 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getCA, getAAR, getAI } from "../redux/action";
 
 const ExpenseRetirement = () => {
   const [currentAge, setCurrentAge] = useState(0);
   const [ageRetire, setAgeRetire] = useState(0);
   const [inflation, setInflation] = useState(4);
 
+  const dispatch = useDispatch();
+
   const handleCurrentChange = (e) => {
     setCurrentAge(e.target.value);
+    dispatch(getCA(e.target.value));
   };
 
   const handleRetireChange = (e) => {
     setAgeRetire(e.target.value);
+    dispatch(getAAR(e.target.value));
   };
 
   const handleInflationChange = (e) => {
     setInflation(e.target.value);
+    dispatch(getAI(e.target.value));
   };
 
   return (

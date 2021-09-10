@@ -1,5 +1,6 @@
-import { GET_EPY, GET_EPM } from "./types";
+import { GET_EPY, GET_EPM, GET_CA, GET_AAR, GET_AI, GET_RAOP } from "./types";
 
+//expenditure input
 export const getEPY = (epy) => ({
   type: GET_EPY,
   payload: epy,
@@ -8,4 +9,20 @@ export const getEPY = (epy) => ({
 export const getEPM = (epm) => ({
   type: GET_EPM,
   payload: epm,
+});
+
+//expense retirement
+export const getCA = (age) => ({
+  type: GET_CA,
+  payload: age,
+});
+
+export const getAAR = (age) => ({
+  type: GET_AAR,
+  payload: age,
+});
+
+export const getAI = (inflation) => ({
+  type: GET_AI,
+  payload: inflation,
 });
