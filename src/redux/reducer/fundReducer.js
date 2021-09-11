@@ -1,4 +1,12 @@
-import { GET_EPY, GET_EPM, GET_CA, GET_AAR, GET_AI } from "../types";
+import {
+  GET_EPY,
+  GET_EPM,
+  GET_CA,
+  GET_AAR,
+  GET_AI,
+  GET_TAE,
+  GET_RAOR,
+} from "../types";
 
 const initialState = {
   //expennditure input
@@ -12,7 +20,7 @@ const initialState = {
 
   //first result
   totalAnnualExpenditure: 0,
-  requiredAmountOfPension: 0,
+  requiredAmountOfRetirement: 0,
 
   //second input
   rateOfPeriod: 0,
@@ -53,6 +61,18 @@ export default function fundReducer(state = initialState, action) {
       return {
         ...state,
         annualInflation: action.payload,
+      };
+
+    case GET_TAE:
+      return {
+        ...state,
+        totalAnnualExpenditure: action.payload,
+      };
+
+    case GET_RAOR:
+      return {
+        ...state,
+        requiredAmountOfRetirement: action.payload,
       };
 
     default:

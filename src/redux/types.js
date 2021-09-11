@@ -8,11 +8,9 @@ export const GET_AAR = "GET_AAR"; //age at retirement
 export const GET_AI = "GET_AI"; //annual inflation
 
 //result
-export const GET_AO = "GET_AO"; //annual out
-export const GET_NF = "GET_NF"; //need fund
+export const GET_TAE = "GET_TAE"; //total amount of expenditure
+export const GET_RAOR = "GET_RAOR"; //required amount of retirement
 
-export const GET_TAE = "GET_TAE";
-export const GET_RAOP = "GET_RAOP";
 export const GET_ROP = "GET_ROP";
 export const GET_CPF = "GET_CPF";
 export const GET_AIEM = "GET_AIEM";

@@ -1,4 +1,12 @@
-import { GET_EPY, GET_EPM, GET_CA, GET_AAR, GET_AI } from "./types";
+import {
+  GET_EPY,
+  GET_EPM,
+  GET_CA,
+  GET_AAR,
+  GET_AI,
+  GET_TAE,
+  GET_RAOR,
+} from "./types";
 
 //expenditure input
 export const getEPY = (epy) => ({
@@ -25,4 +33,15 @@ export const getAAR = (age) => ({
 export const getAI = (inflation) => ({
   type: GET_AI,
   payload: inflation,
+});
+
+//first resullt
+export const getTAE = (total) => ({
+  type: GET_TAE,
+  payload: total,
+});
+
+export const getRAOR = (amount) => ({
+  type: GET_RAOR,
+  payload: amount,
 });

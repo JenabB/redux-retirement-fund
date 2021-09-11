@@ -37,11 +37,11 @@ const Result = () => {
     <div className="bg-blue-400 text-white rounded-t-xl">
       <div className=" m-2 p-4 grid grid-cols-2">
         <div className="m-3">
-          <h1>Total annual expenditure at retirement</h1>
+          <h1>Amount that needs to be invested each month</h1>
           <h1 className="text-2xl">{formatRp(annualOut)}</h1>
         </div>
         <div className="m-3">
-          <h1>Required amount of pension</h1>
+          <h1>Amount that needs to be invested annually</h1>
           <h1 className="text-2xl">{formatRp(needFunds)}</h1>
         </div>
       </div>

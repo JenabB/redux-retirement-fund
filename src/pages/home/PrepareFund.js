@@ -4,7 +4,8 @@ import Result from "../../components/prepareFund/Result";
 const PrepareFund = () => {
   return (
     <div>
-      <div className="my-10 lg:w-full w-3/6 mx-auto">
+      <div className="my-10">
+        <h1 className="text-center">Prepare Retirement Fund</h1>
         <div className="m-4">
           <Result />
           <div className=" shadow-lg p-4">

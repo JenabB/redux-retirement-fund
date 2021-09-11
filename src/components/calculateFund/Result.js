@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { formatRp } from "../../utils/formatRp";
+import { getTAE, getRAOR } from "../../redux/action";
 
 const Result = () => {
   const [annualOut, setAnnualOut] = useState(0);
@@ -17,14 +18,20 @@ const Result = () => {
   } = useSelector((state) => state.retirementFund, shallowEqual);
 
   useEffect(() => {
-    setAnnualOut(
-      Math.round(
-        expenditurePerYear *
-          Math.pow(1 + annualInflation / 100, ageAtRetirement - currentAge)
-      )
+    const annual = Math.round(
+      expenditurePerYear *
+        Math.pow(1 + annualInflation / 100, ageAtRetirement - currentAge)
     );
-    setNeedFunds(Math.round(annualOut / (annualInflation / 100)));
+
+    setAnnualOut(annual);
+    dispatch(getTAE(annual));
+
+    const need = Math.round(annualOut / (annualInflation / 100));
+    setNeedFunds(need);
+
+    dispatch(getRAOR(need));
   }, [
+    dispatch,
     ageAtRetirement,
     annualInflation,
     annualOut,
