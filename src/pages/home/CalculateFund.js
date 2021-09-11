@@ -7,7 +7,7 @@ import Result from "../../components/calculateFund/Result";
 const CalculateFund = () => {
   return (
     <div>
-      <div className="my-10">
+      <div className="lg:my-10 my-4">
         <h1 className="text-center">Calculate Retirement Fund</h1>
         <div className="lg:m-4">
           <Result />

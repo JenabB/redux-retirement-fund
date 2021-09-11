@@ -1,11 +1,18 @@
 import {
+  //first input
   GET_EPY,
   GET_EPM,
   GET_CA,
   GET_AAR,
   GET_AI,
+
+  //first output
   GET_TAE,
   GET_RAOR,
+
+  //second input
+  GET_ROP,
+  GET_CRF,
 } from "../types";
 
 const initialState = {
@@ -24,7 +31,8 @@ const initialState = {
 
   //second input
   rateOfPeriod: 0,
-  currentPensionFund: 0,
+  currentRetirementFund: 0,
+
   // second result
   amountInvestedEachMonth: 0,
   amountInvestedEachAnnually: 0,
@@ -32,6 +40,7 @@ const initialState = {
 
 export default function fundReducer(state = initialState, action) {
   switch (action.type) {
+    // first input
     case GET_EPY:
       return {
         ...state,
@@ -45,6 +54,7 @@ export default function fundReducer(state = initialState, action) {
         expenditurePerYear: action.payload * 12,
       };
 
+    //current age
     case GET_CA:
       return {
         ...state,
@@ -73,6 +83,18 @@ export default function fundReducer(state = initialState, action) {
       return {
         ...state,
         requiredAmountOfRetirement: action.payload,
+      };
+
+    case GET_ROP:
+      return {
+        ...state,
+        rateOfPeriod: action.payload,
+      };
+
+    case GET_CRF:
+      return {
+        ...state,
+        currentRetirementFund: action.payload,
       };
 
     default:

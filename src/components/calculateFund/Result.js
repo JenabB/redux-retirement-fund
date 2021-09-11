@@ -48,7 +48,7 @@ const Result = () => {
           <h1 className="text-2xl">{formatRp(annualOut)}</h1>
         </div>
         <div className="m-3">
-          <h1>Required amount of pension</h1>
+          <h1>Required amount of retirement</h1>
           <h1 className="text-2xl">{formatRp(needFunds)}</h1>
         </div>
       </div>

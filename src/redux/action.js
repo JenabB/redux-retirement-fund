@@ -1,11 +1,18 @@
 import {
+  //first input
   GET_EPY,
   GET_EPM,
   GET_CA,
   GET_AAR,
   GET_AI,
+
+  //first output
   GET_TAE,
   GET_RAOR,
+
+  //second input
+  GET_ROP,
+  GET_CRF,
 } from "./types";
 
 //expenditure input
@@ -35,7 +42,7 @@ export const getAI = (inflation) => ({
   payload: inflation,
 });
 
-//first resullt
+//first result
 export const getTAE = (total) => ({
   type: GET_TAE,
   payload: total,
@@ -44,4 +51,15 @@ export const getTAE = (total) => ({
 export const getRAOR = (amount) => ({
   type: GET_RAOR,
   payload: amount,
+});
+
+//second input
+export const getROP = (rate) => ({
+  type: GET_ROP,
+  payload: rate,
+});
+
+export const getCRF = (current) => ({
+  type: GET_CRF,
+  payload: current,
 });

@@ -47,17 +47,17 @@ const ExpenseRetirement = () => {
               onChange={handleRetireChange}
             />
           </div>
-          <div className="my-4">
-            <label className="text-gray-400 m-2">
-              Annual inflation (Optional)
-            </label>
-            <input
-              className="bg-blue-200 pl-2 rounded-lg w-2/5"
-              type="number"
-              value={annualInflation}
-              onChange={handleInflationChange}
-            />
-          </div>
+        </div>
+        <div className="my-4">
+          <label className="text-gray-400 m-2">
+            Annual inflation (Optional)
+          </label>
+          <input
+            className="bg-blue-200 pl-2 rounded-lg w-2/5"
+            type="number"
+            value={annualInflation}
+            onChange={handleInflationChange}
+          />
         </div>
       </div>
     </div>
