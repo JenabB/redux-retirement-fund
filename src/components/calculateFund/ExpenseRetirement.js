@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getCA, getAAR, getAI } from "../redux/action";
+import { getCA, getAAR, getAI } from "../../redux/action";
 
 const ExpenseRetirement = () => {
   const [currentAge, setCurrentAge] = useState(0);

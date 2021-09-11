@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getEPY, getEPM } from "../redux/action";
+import { getEPY, getEPM } from "../../redux/action";
 
 const ExpenditureInput = () => {
   const [epy, setEpy] = useState(0);

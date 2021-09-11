@@ -1,4 +1,4 @@
-import { GET_EPY, GET_EPM, GET_CA, GET_AAR, GET_AI, GET_RAOP } from "./types";
+import { GET_EPY, GET_EPM, GET_CA, GET_AAR, GET_AI } from "./types";
 
 //expenditure input
 export const getEPY = (epy) => ({

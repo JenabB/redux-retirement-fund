@@ -1,16 +1,18 @@
 import React from "react";
 import AppBar from "../components/AppBar";
-import ExpenditureInput from "../components/ExpenditureInput";
-import ExpenseRetirement from "../components/ExpenseRetirement";
+import CalculateFund from "./home/CalculateFund";
+import PrepareFund from "./home/PrepareFund";
 
 const Home = () => {
   return (
     <div>
       <AppBar />
-      <div className="my-10 lg:w-3/6 mx-auto">
-        <div className="m-4 shadow-lg p-4">
-          <ExpenditureInput />
-          <ExpenseRetirement />
+      <div className="grid lg:grid-cols-2">
+        <div className="p-4">
+          <CalculateFund />
+        </div>
+        <div className="p-4">
+          <PrepareFund />
         </div>
       </div>
     </div>

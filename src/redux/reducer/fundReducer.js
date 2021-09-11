@@ -8,7 +8,7 @@ const initialState = {
   //expense retirement
   currentAge: 0,
   ageAtRetirement: 0,
-  annualInflation: 0,
+  annualInflation: 4,
 
   //first result
   totalAnnualExpenditure: 0,
@@ -34,7 +34,7 @@ export default function fundReducer(state = initialState, action) {
       return {
         ...state,
         expenditurePerMonth: action.payload,
-        expenditurePerYear: action.action * 12,
+        expenditurePerYear: action.payload * 12,
       };
 
     case GET_CA:
