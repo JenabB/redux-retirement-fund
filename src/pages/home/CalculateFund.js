@@ -11,14 +11,11 @@ const CalculateFund = () => {
         <h1 className="text-center">Calculate Retirement Fund</h1>
         <div className="lg:m-4">
           <Result />
-          <div className=" shadow-lg p-4">
+          <div className="shadow-lg p-4 rounded-b-lg">
             <ExpenditureInput />
             <ExpenseRetirement />
           </div>
         </div>
-      </div>
-      <div>
-        <div></div>
       </div>
     </div>
   );
