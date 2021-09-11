@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useSelector } from "react-redux";
 import { formatRp } from "../../utils/formatRp";
 
 const Result = () => {
   const [pmt, setPmt] = useState(0);
-
-  const dispatch = useDispatch();
-
   const {
     rateOfPeriod,
     currentAge,
