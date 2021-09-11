@@ -9,7 +9,7 @@ const CalculateFund = () => {
     <div>
       <div className="my-10">
         <h1 className="text-center">Calculate Retirement Fund</h1>
-        <div className="m-4">
+        <div className="lg:m-4">
           <Result />
           <div className=" shadow-lg p-4">
             <ExpenditureInput />
