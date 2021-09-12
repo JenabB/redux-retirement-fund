@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+
+//redux
 import { shallowEqual, useSelector } from "react-redux";
 import { formatRp } from "../../utils/formatRp";
 
 const Result = () => {
+  //state
   const [pmt, setPmt] = useState(0);
   const {
     rateOfPeriod,
@@ -12,10 +15,11 @@ const Result = () => {
     requiredAmountOfRetirement,
   } = useSelector((state) => state.retirementFund, shallowEqual);
 
+  //calcuation with side effect
   useEffect(() => {
+    // if rate of period is not 0
     if (rateOfPeriod !== 0) {
       const q = Math.pow(1 + rateOfPeriod / 100, ageAtRetirement - currentAge);
-      console.log(q);
       setPmt(
         -(
           (rateOfPeriod / 100) *
@@ -23,7 +27,10 @@ const Result = () => {
         ) /
           ((-1 + q) * (1 + (rateOfPeriod / 100) * 0))
       );
-    } else if (ageAtRetirement - currentAge !== 0) {
+    }
+
+    //if not empty
+    else if (ageAtRetirement - currentAge !== 0) {
       setPmt(
         -(-requiredAmountOfRetirement - currentRetirementFund) /
           (ageAtRetirement - currentAge)
@@ -38,7 +45,7 @@ const Result = () => {
   ]);
 
   return (
-    <div className="bg-blue-400 text-white rounded-t-xl">
+    <div className="bg-green-500 text-white rounded-t-xl">
       <div className=" m-2 p-2 grid grid-cols-2">
         <div className="m-3">
           <h1>Amount that needs to be invested each month</h1>

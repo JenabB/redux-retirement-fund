@@ -2,6 +2,8 @@ import {
   //first input
   GET_EPY,
   GET_EPM,
+
+  //second input
   GET_CA,
   GET_AAR,
   GET_AI,
@@ -10,12 +12,17 @@ import {
   GET_TAE,
   GET_RAOR,
 
-  //second input
+  //third input
   GET_ROP,
   GET_CRF,
+
+  //second output
+  GET_AIEA,
+  GET_AIEM,
 } from "./types";
 
-//expenditure input
+//
+//first input
 export const getEPY = (epy) => ({
   type: GET_EPY,
   payload: epy,
@@ -26,7 +33,7 @@ export const getEPM = (epm) => ({
   payload: epm,
 });
 
-//expense retirement
+//second input
 export const getCA = (age) => ({
   type: GET_CA,
   payload: age,
@@ -42,7 +49,8 @@ export const getAI = (inflation) => ({
   payload: inflation,
 });
 
-//first result
+//
+//first output
 export const getTAE = (total) => ({
   type: GET_TAE,
   payload: total,
@@ -53,7 +61,8 @@ export const getRAOR = (amount) => ({
   payload: amount,
 });
 
-//second input
+//
+//third input
 export const getROP = (rate) => ({
   type: GET_ROP,
   payload: rate,
@@ -62,4 +71,16 @@ export const getROP = (rate) => ({
 export const getCRF = (current) => ({
   type: GET_CRF,
   payload: current,
+});
+
+//
+//second output
+export const getAIEA = (value) => ({
+  type: GET_AIEA,
+  payload: value,
+});
+
+export const getAIEM = (value) => ({
+  type: GET_AIEM,
+  payload: value,
 });

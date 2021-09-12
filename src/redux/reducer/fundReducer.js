@@ -2,6 +2,8 @@ import {
   //first input
   GET_EPY,
   GET_EPM,
+
+  //second input
   GET_CA,
   GET_AAR,
   GET_AI,
@@ -10,17 +12,21 @@ import {
   GET_TAE,
   GET_RAOR,
 
-  //second input
+  //third input
   GET_ROP,
   GET_CRF,
+
+  //second output
+  GET_AIEM,
+  GET_AIEA,
 } from "../types";
 
 const initialState = {
-  //expennditure input
+  //first input
   expenditurePerYear: 0,
   expenditurePerMonth: 0,
 
-  //expense retirement
+  //second input
   currentAge: 0,
   ageAtRetirement: 0,
   annualInflation: 4,
@@ -29,11 +35,11 @@ const initialState = {
   totalAnnualExpenditure: 0,
   requiredAmountOfRetirement: 0,
 
-  //second input
+  //third input
   rateOfPeriod: 0,
   currentRetirementFund: 0,
 
-  // second result
+  //second result
   amountInvestedEachMonth: 0,
   amountInvestedEachAnnually: 0,
 };
@@ -54,7 +60,7 @@ export default function fundReducer(state = initialState, action) {
         expenditurePerYear: action.payload * 12,
       };
 
-    //current age
+    //second input
     case GET_CA:
       return {
         ...state,
@@ -73,6 +79,7 @@ export default function fundReducer(state = initialState, action) {
         annualInflation: action.payload,
       };
 
+    //first output
     case GET_TAE:
       return {
         ...state,
@@ -85,6 +92,7 @@ export default function fundReducer(state = initialState, action) {
         requiredAmountOfRetirement: action.payload,
       };
 
+    //third input
     case GET_ROP:
       return {
         ...state,
@@ -97,6 +105,18 @@ export default function fundReducer(state = initialState, action) {
         currentRetirementFund: action.payload,
       };
 
+    //second output
+    case GET_AIEM:
+      return {
+        ...state,
+        amountInvestedEachMonth: action.payload,
+      };
+
+    case GET_AIEA:
+      return {
+        ...state,
+        amountInvestedEachAnnually: action.payload,
+      };
     default:
       return state;
   }

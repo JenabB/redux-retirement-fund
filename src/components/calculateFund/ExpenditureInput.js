@@ -1,8 +1,11 @@
 import React from "react";
+
+//redux
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getEPY, getEPM } from "../../redux/action";
 
 const ExpenditureInput = () => {
+  //get value from redux
   const { expenditurePerYear, expenditurePerMonth } = useSelector(
     (state) => state.retirementFund,
     shallowEqual
@@ -10,6 +13,7 @@ const ExpenditureInput = () => {
 
   const dispatch = useDispatch();
 
+  //onChange
   const handleEpyChange = (e) => {
     dispatch(getEPY(e.target.value));
   };

@@ -1,3 +1,5 @@
+//format number to indonesian currency
+
 export const formatRp = (nominal) => {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",

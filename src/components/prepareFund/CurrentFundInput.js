@@ -1,14 +1,18 @@
 import React from "react";
+
+//redux
 import { useDispatch, useSelector } from "react-redux";
 import { getCRF } from "../../redux/action";
 
 const CurrentFundInput = () => {
   const dispatch = useDispatch();
 
+  //state
   const currentRetirementFund = useSelector(
     (state) => state.retirementFund.currentRetirementFund
   );
 
+  //action
   const handleCurrentFundChange = (e) => {
     dispatch(getCRF(e.target.value));
   };

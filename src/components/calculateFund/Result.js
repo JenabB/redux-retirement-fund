@@ -1,20 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+
+//redux
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import { formatRp } from "../../utils/formatRp";
 import { getTAE, getRAOR } from "../../redux/action";
 
-const Result = () => {
-  const [annualOut, setAnnualOut] = useState(0);
-  const [needFunds, setNeedFunds] = useState(0);
+//utils
+import { formatRp } from "../../utils/formatRp";
 
+const Result = () => {
   const dispatch = useDispatch();
 
   const {
+    //first input
     expenditurePerYear,
-    expenditurePerMonth,
+
+    //second input
     currentAge,
     ageAtRetirement,
     annualInflation,
+
+    //result
+    totalAnnualExpenditure,
+    requiredAmountOfRetirement,
   } = useSelector((state) => state.retirementFund, shallowEqual);
 
   useEffect(() => {
@@ -23,21 +30,18 @@ const Result = () => {
         Math.pow(1 + annualInflation / 100, ageAtRetirement - currentAge)
     );
 
-    setAnnualOut(annual);
     dispatch(getTAE(annual));
 
-    const need = Math.round(annualOut / (annualInflation / 100));
-    setNeedFunds(need);
+    const need = Math.round(totalAnnualExpenditure / (annualInflation / 100));
 
     dispatch(getRAOR(need));
   }, [
-    dispatch,
     ageAtRetirement,
     annualInflation,
-    annualOut,
     currentAge,
-    expenditurePerMonth,
+    dispatch,
     expenditurePerYear,
+    totalAnnualExpenditure,
   ]);
 
   return (
@@ -45,11 +49,11 @@ const Result = () => {
       <div className=" m-2 p-2 grid grid-cols-2">
         <div className="m-3">
           <h1>Total annual expenditure at retirement</h1>
-          <h1 className="text-2xl">{formatRp(annualOut)}</h1>
+          <h1 className="text-2xl">{formatRp(totalAnnualExpenditure)}</h1>
         </div>
         <div className="m-3">
           <h1>Required amount of retirement</h1>
-          <h1 className="text-2xl">{formatRp(needFunds)}</h1>
+          <h1 className="text-2xl">{formatRp(requiredAmountOfRetirement)}</h1>
         </div>
       </div>
     </div>

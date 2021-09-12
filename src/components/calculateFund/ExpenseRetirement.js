@@ -1,23 +1,26 @@
 import React from "react";
+
+//redux
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getCA, getAAR, getAI } from "../../redux/action";
 
 const ExpenseRetirement = () => {
+  //get value from redux
   const { currentAge, ageAtRetirement, annualInflation } = useSelector(
     (state) => state.retirementFund,
     shallowEqual
   );
 
+  //dispatch for connect to action and redux
   const dispatch = useDispatch();
 
+  //action
   const handleCurrentChange = (e) => {
     dispatch(getCA(e.target.value));
   };
-
   const handleRetireChange = (e) => {
     dispatch(getAAR(e.target.value));
   };
-
   const handleInflationChange = (e) => {
     dispatch(getAI(e.target.value));
   };
@@ -47,17 +50,17 @@ const ExpenseRetirement = () => {
               onChange={handleRetireChange}
             />
           </div>
-        </div>
-        <div className="my-4">
-          <label className="text-gray-400 m-2">
-            Annual inflation (Optional)
-          </label>
-          <input
-            className="bg-blue-200 pl-2 rounded-lg w-2/5"
-            type="number"
-            value={annualInflation}
-            onChange={handleInflationChange}
-          />
+          <div className="my-4">
+            <label className="text-gray-400 m-2">
+              Annual inflation (Optional)
+            </label>
+            <input
+              className="bg-blue-200 pl-2 rounded-lg w-2/5"
+              type="number"
+              value={annualInflation}
+              onChange={handleInflationChange}
+            />
+          </div>
         </div>
       </div>
     </div>
