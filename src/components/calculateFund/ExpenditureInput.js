@@ -24,10 +24,10 @@ const ExpenditureInput = () => {
 
   return (
     <div>
-      <h1 className="mb-4">Current spending amount</h1>
+      <h1 className="mb-4 font-bold">Current spending amount</h1>
       <div className="grid grid-cols-2 mt-4">
         <div>
-          <h1 className="text-gray-400 m-2">Expenditure Per Year</h1>
+          <h1 className="text-gray-600 m-2">Expenditure Per Year</h1>
           <input
             className="bg-blue-200 pl-2 rounded-lg w-5/6"
             name="expenditurePerYear"
@@ -36,7 +36,7 @@ const ExpenditureInput = () => {
           />
         </div>
         <div>
-          <h1 className="text-gray-400 m-2">Expenditure Per Month</h1>
+          <h1 className="text-gray-600 m-2">Expenditure Per Month</h1>
           <input
             className="bg-blue-200 pl-2 rounded-lg w-5/6"
             name="expenditurePerMonth"

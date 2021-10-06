@@ -45,15 +45,19 @@ const Result = () => {
   ]);
 
   return (
-    <div className="bg-green-500 text-white rounded-t-xl">
+    <div className="bg-teal-dark text-white rounded-t-xl">
       <div className=" m-2 p-2 grid grid-cols-2">
         <div className="m-3">
-          <h1>Amount that needs to be invested each month</h1>
-          <h1 className="text-2xl">{formatRp(pmt / 12)}</h1>
+          <h1 className="font-bold">
+            Amount that needs to be invested each month
+          </h1>
+          <h1 className="text-xl">{formatRp(pmt / 12)}</h1>
         </div>
         <div className="m-3">
-          <h1>Amount that needs to be invested annually</h1>
-          <h1 className="text-2xl">{formatRp(pmt)}</h1>
+          <h1 className="font-bold">
+            Amount that needs to be invested annually
+          </h1>
+          <h1 className="text-xl">{formatRp(pmt)}</h1>
         </div>
       </div>
     </div>

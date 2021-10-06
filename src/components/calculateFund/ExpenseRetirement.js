@@ -28,10 +28,10 @@ const ExpenseRetirement = () => {
   return (
     <div className="mt-10">
       <div>
-        <h1 className="mb-4">Total expenses at retirement</h1>
+        <h1 className="mb-4 font-bold">Total expenses at retirement</h1>
         <div className="grid grid-cols-2">
           <div>
-            <label className="text-gray-400 m-2">Current age</label>
+            <label className="text-gray-600 m-2">Current age</label>
             <input
               className="bg-blue-200 pl-2 rounded-lg w-5/6"
               type="number"
@@ -41,7 +41,7 @@ const ExpenseRetirement = () => {
             />
           </div>
           <div>
-            <label className="text-gray-400 m-2">Age at retirement</label>
+            <label className="text-gray-600 m-2">Age at retirement</label>
             <input
               className="bg-blue-200 pl-2 rounded-lg w-5/6"
               type="number"
@@ -51,11 +51,12 @@ const ExpenseRetirement = () => {
             />
           </div>
           <div className="my-4">
-            <label className="text-gray-400 m-2">
+            <label className="text-gray-600 m-2">
               Annual inflation (Optional)
             </label>
+            <br />
             <input
-              className="bg-blue-200 pl-2 rounded-lg w-2/5"
+              className="bg-blue-200 pl-2 mt-2 rounded-lg w-2/5"
               type="number"
               value={annualInflation}
               onChange={handleInflationChange}
