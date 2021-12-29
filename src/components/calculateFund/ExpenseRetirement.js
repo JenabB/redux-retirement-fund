@@ -3,6 +3,7 @@ import React from "react";
 //redux
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getCA, getAAR, getAI } from "../../redux/action";
+import formInput from "../../theme/formInput";
 
 const ExpenseRetirement = () => {
   //get value from redux
@@ -33,7 +34,7 @@ const ExpenseRetirement = () => {
           <div>
             <label className="text-gray-600 m-2">Current age</label>
             <input
-              className="bg-blue-200 pl-2 rounded-lg w-5/6"
+              className={formInput}
               type="number"
               name="current"
               value={currentAge}
@@ -43,7 +44,7 @@ const ExpenseRetirement = () => {
           <div>
             <label className="text-gray-600 m-2">Age at retirement</label>
             <input
-              className="bg-blue-200 pl-2 rounded-lg w-5/6"
+              className={formInput}
               type="number"
               name="retirement"
               value={ageAtRetirement}
@@ -56,7 +57,7 @@ const ExpenseRetirement = () => {
             </label>
             <br />
             <input
-              className="bg-blue-200 pl-2 mt-2 rounded-lg w-2/5"
+              className="bg-blue-200 px-4 mt-2 py-1 rounded w-2/5"
               type="number"
               value={annualInflation}
               onChange={handleInflationChange}

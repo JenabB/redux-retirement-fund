@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getROP } from "../../redux/action";
+import formInput from "../../theme/formInput";
 
 const ReturnTargetInput = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const ReturnTargetInput = () => {
     <div>
       <h1 className="text-gray-400 m-2">Return Target</h1>
       <input
-        className="bg-blue-200 pl-2 rounded-lg w-5/6"
+        className={formInput}
         type="number"
         placeholder="return target input"
         value={rateOfPeriod}

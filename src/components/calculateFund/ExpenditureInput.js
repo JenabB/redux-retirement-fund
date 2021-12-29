@@ -3,6 +3,7 @@ import React from "react";
 //redux
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getEPY, getEPM } from "../../redux/action";
+import formInput from "../../theme/formInput";
 
 const ExpenditureInput = () => {
   //get value from redux
@@ -29,7 +30,7 @@ const ExpenditureInput = () => {
         <div>
           <h1 className="text-gray-600 m-2">Expenditure Per Year</h1>
           <input
-            className="bg-blue-200 pl-2 rounded-lg w-5/6"
+            className={formInput}
             name="expenditurePerYear"
             value={expenditurePerYear}
             onChange={handleEpyChange}
@@ -38,7 +39,7 @@ const ExpenditureInput = () => {
         <div>
           <h1 className="text-gray-600 m-2">Expenditure Per Month</h1>
           <input
-            className="bg-blue-200 pl-2 rounded-lg w-5/6"
+            className={formInput}
             name="expenditurePerMonth"
             value={expenditurePerMonth}
             onChange={handleEpmChange}
