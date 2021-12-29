@@ -1,10 +1,12 @@
 import React from "react";
+import AppBarWithBack from "../components/common/AppBarWithBack";
 
 const Saved = () => {
   return (
-    <div>
+    <>
+      <AppBarWithBack />
       <h1>Saved</h1>
-    </div>
+    </>
   );
 };
 

@@ -19,7 +19,7 @@ import {
   //second output
   GET_AIEA,
   GET_AIEM,
-} from "./types";
+} from "./type/fundType";
 
 //
 //first input

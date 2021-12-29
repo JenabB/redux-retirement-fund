@@ -19,7 +19,7 @@ import {
   //second output
   GET_AIEM,
   GET_AIEA,
-} from "../types";
+} from "../type/fundType";
 
 const initialState = {
   //first input
