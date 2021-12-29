@@ -48,12 +48,14 @@ const Result = () => {
     <div className="bg-teal-normal text-white rounded-t-xl">
       <div className=" m-2 p-2 grid grid-cols-2">
         <div className="m-2">
-          <h1 className="font-bold">Total annual expenditure at retirement</h1>
-          <h1 className="text-xl">{formatRp(totalAnnualExpenditure)}</h1>
+          <h1 className="font-bold mb-2">
+            Total annual expenditure at retirement
+          </h1>
+          <h1 className="lg:text-xl">{formatRp(totalAnnualExpenditure)}</h1>
         </div>
         <div className="m-2">
-          <h1 className="font-bold">Required amount of retirement</h1>
-          <h1 className="text-xl">{formatRp(requiredAmountOfRetirement)}</h1>
+          <h1 className="font-bold mb-4">Required amount of retirement</h1>
+          <h1 className="lg:text-xl">{formatRp(requiredAmountOfRetirement)}</h1>
         </div>
       </div>
     </div>

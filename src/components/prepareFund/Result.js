@@ -51,13 +51,13 @@ const Result = () => {
           <h1 className="font-bold">
             Amount that needs to be invested each month
           </h1>
-          <h1 className="text-xl">{formatRp(pmt / 12)}</h1>
+          <h1 className="lg:text-xl">{formatRp(pmt / 12)}</h1>
         </div>
         <div className="m-3">
           <h1 className="font-bold">
             Amount that needs to be invested annually
           </h1>
-          <h1 className="text-xl">{formatRp(pmt)}</h1>
+          <h1 className="lg:text-xl">{formatRp(pmt)}</h1>
         </div>
       </div>
     </div>
